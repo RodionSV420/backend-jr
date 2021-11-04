@@ -1,0 +1,24 @@
+CREATE TABLE student (
+  id int NOT NULL,
+  full_name varchar(255) NOT NULL,
+  age int NOT NULL,
+  sex varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='(студент: фио, возраст, пол; курс: название курса)';
+INSERT INTO v0.student (id, full_name, age, sex) VALUES ('1', 'Иванов', '18', 'M');
+INSERT INTO v0.student (id, full_name, age, sex) VALUES ('2', 'Иванова', '18', 'F');
+INSERT INTO v0.student (id, full_name, age, sex) VALUES ('3', 'Петров', '18', 'M');
+INSERT INTO v0.student (id, full_name, age, sex) VALUES ('4', 'Петрова', '18', 'F');
+INSERT INTO v0.student (id, full_name, age, sex) VALUES ('5', 'Самойлов', '30', 'M');
+
+CREATE TABLE v0.courses (
+  coursename VARCHAR(255) NOT NULL)
+COMMENT = '(студент: фио, возраст, пол; курс: название курса)';
+INSERT INTO v0.courses (coursename) VALUES ('Математика');
+INSERT INTO v0.courses (coursename) VALUES ('Высшая математика');
+INSERT INTO v0.courses (coursename) VALUES ('Матан');
+UPDATE v0.courses SET Sid = '12345' WHERE (coursename = 'Английский язык');
+UPDATE v0.courses SET Sid = '1234' WHERE (coursename = 'Высшая математика');
+UPDATE v0.courses SET Sid = '123' WHERE (coursename = 'Матан');
+UPDATE v0.courses SET Sid = '12' WHERE (coursename = 'Математика');
+UPDATE v0.courses SET Sid = '1' WHERE (coursename = 'Черчение');
